@@ -112,9 +112,9 @@ from nltk import classify
 from nltk import NaiveBayesClassifier
 classifier = NaiveBayesClassifier.train(train_data)
 
-print("Accuracy is:", classify.accuracy(classifier, test_data))
+#print("Accuracy is:", classify.accuracy(classifier, test_data))
 
-print(classifier.show_most_informative_features(10))
+#print(classifier.show_most_informative_features(10))
 
 #CUSTOM INPUT
 
