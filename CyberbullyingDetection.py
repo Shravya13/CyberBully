@@ -1,6 +1,6 @@
 import cgi
 form=cgi.FieldStorage()
-sample=str(form.getvalue("sampletext"))
+sample=form.getvalue("sampletext")
 #INSTALLING AND IMPORTING NLTK
 import nltk
 
