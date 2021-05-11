@@ -21,18 +21,7 @@ nltk.download('averaged_perceptron_tagger')
 from nltk.tag import pos_tag
 from nltk.stem.wordnet import WordNetLemmatizer
 
-#FUNCTION FOR LEMMATIZATION<DONT USE>def lemmatize_sentence(tokens):    AS THIS IS CARRIED OUT IN THE "NOISE REMOVAL" STEP
-    lemmatizer = WordNetLemmatizer()
-    lemmatized_sentence = []
-    for word, tag in pos_tag(tokens):
-        if tag.startswith('NN'):
-            pos = 'n'
-        elif tag.startswith('VB'):
-            pos = 'v'
-        else:
-            pos = 'a'
-        lemmatized_sentence.append(lemmatizer.lemmatize(word, pos))
-    return lemmatized_sentence
+
 
 #NOISE REMOVAL
 import re, string
