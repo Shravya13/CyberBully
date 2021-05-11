@@ -1,6 +1,4 @@
 import cgi
-import cgitb
-print('content-type:text/html\r\n\r\n')
 form=cgi.FieldStorage()
 sample=str(form.getvalue("sampletext"))
 #INSTALLING AND IMPORTING NLTK
@@ -126,6 +124,7 @@ from nltk.tokenize import word_tokenize
 
 custom_tokens = remove_noise(word_tokenize(sample))
 fi=classifier.classify(dict([token, True] for token in custom_tokens))
+print('content-type:text/html\r\n\r\n')
 print('<html>')
 print('<body>')
 print('<h1> THAT WAS A {} COMMENT - THANKS FOR BEING KIND! THE UNIVERSE IS GRATEFUL!</h1>'.format(fi))
